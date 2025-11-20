@@ -29,9 +29,9 @@ def scan_port(alvo, porta):
 portas = list({22, 23, 53, 80, 1315, 179})
 portas.sort()
 
-for octeto1 in range(0, 2, 1):
-    for octeto2 in range(0, 255, 1):
-        alvo = f"10.0.{octeto1}.{octeto2}"
+for octeto1 in range(3, 9, 1):
+    for octeto2 in range(3, 9, 1):
+        alvo = f"8.8.{octeto1}.{octeto2}"
         print(f"\033[34mProcurando em {alvo}\033[0m")
         if(online(alvo)):
             for porta in portas:
