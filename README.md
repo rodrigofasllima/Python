@@ -1,4 +1,4 @@
-# Python
+# portTest.py
 # 1. Purpose
 This Python script aims to check whether specific network hosts are online and, if so, perform a TCP port scan to identify which ports are open or closed.
 It uses the ping3 library to check host availability and the native socket module to test TCP connections.
