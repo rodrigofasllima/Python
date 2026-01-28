@@ -13,10 +13,10 @@ pip install ping3
 
 # 3. Code Structure
 
-3.1 Function online(target)
-Input: IP address or hostname (target).
-Process: sends a ping using ping3.
-Output: True if the host responds, False otherwise.
+# 3.1 Function online(target)
+Input: IP address or hostname (target).  
+Process: sends a ping using ping3.  
+Output: True if the host responds, False otherwise.  
 
 # 3.2 Function scan_port(target, port)
 Input:
@@ -42,24 +42,27 @@ Defines a set of ports to be checked:
 # 3.4 Main Loop
 IP Iteration:
   - Generates addresses from 8.8.3.3 to 8.8.8.8.
-Verification:
-  - First checks if the host is online.
+    
+Verification:  
+  - First checks if the host is online.  
   - If online, scans the list of ports to check if they are open or closed.
+    
 Output:
-  - Colored terminal output:
-    - Blue → IP being tested.
-    - Green → Port open.
-    - Red → Port closed.
-    - Yellow → Host offline.
+  - Colored terminal output:  
+    - Blue → IP being tested.  
+    - Green → Port open.  
+    - Red → Port closed.  
+    - Yellow → Host offline.  
 
 # 4. Sample Output
+```
 Procurando em 8.8.3.3
-                [OFFLIN]
-Procurando em 8.8.3.4
-    conexão TCP porta 22    [CLOSED]
-    conexão TCP porta 23    [CLOSED]
-    conexão TCP porta 53    [ OPEN ]
-
+						[OFFLIN]  
+Procurando em 8.8.3.4  
+  conexão TCP porta 22  [CLOSED]  
+  conexão TCP porta 23  [CLOSED]  
+  conexão TCP porta 53  [ OPEN ]  
+```
 # 5. Possible Improvements
 - Add multithreading to speed up scanning.
 - Allow dynamic input of IPs and ports via command-line arguments.
